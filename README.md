@@ -1,10 +1,10 @@
 # naru
 Vector Tile Academy (VTA) code for Raspberry Pi
 
-# background
+# Background
 This repository is the Raspberry Pi implementation for [Vector Tile Academy](https://unvt.github.io/vta).
 
-# use
+# Use
 Log in to your Raspbian and then execute the following.
 
 ## install and download (requires internet connection)
@@ -15,12 +15,6 @@ cd naru
 rake inet:install # install extra software
 rake inet:download # donwload source geospatial data for exercise
 ```
-
-### list of software installed by `rake inet:install`
-### Node.js
-- [@mapbox/vtshaver](https://github.com/mapbox/vtshaver)
-### Ruby
-- [mdless](https://github.com/ttscoff/mdless)
 
 ## first time exercise
 ```zsh
@@ -39,8 +33,15 @@ rake optimizer
 rake shaver
 ```
 
-# shutdown Raspberry Pi
+## shutdown Raspberry Pi
 ```zsh
 sudo poweroff
 ```
 Now it is OK to disconnect Raspberry Pi. 
+
+# Implementation documents
+## list of software installed by `rake inet:install`
+### Node.js
+- [@mapbox/vtshaver](https://github.com/mapbox/vtshaver)
+### Ruby
+- [mdless](https://github.com/ttscoff/mdless)
