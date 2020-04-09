@@ -7,7 +7,7 @@ This repository is the Raspberry Pi implementation for [Vector Tile Academy](htt
 # Use
 Log in to your Raspbian and then execute the following.
 
-## install and download (requires internet connection)
+## Install and download (requires internet connection)
 ```zsh
 curl -sL https://unvt.github.io/equinox/install.sh | bash -
 git clone https://github.com/unvt/naru.git
@@ -16,14 +16,14 @@ rake inet:install # install extra software
 rake inet:download # donwload source geospatial data for exercise
 ```
 
-## first time exercise
+## First time exercise
 ```zsh
 rake tiles
 rake style
 rake host
 ```
 
-## advanced exercise
+## Advanced exercise
 ```zsh
 rake mapbox-gl-js
 rake js
@@ -33,14 +33,14 @@ rake optimizer
 rake shaver
 ```
 
-## shutdown Raspberry Pi
+## Shutdown Raspberry Pi
 ```zsh
 sudo poweroff
 ```
 Now it is OK to disconnect Raspberry Pi. 
 
 # Implementation documents
-## list of software installed by `rake inet:install`
+## List of software installed by `rake inet:install`
 ### Node.js
 - [@mapbox/vtshaver](https://github.com/mapbox/vtshaver)
 ### Ruby
