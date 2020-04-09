@@ -47,4 +47,4 @@ Now it is OK to disconnect Raspberry Pi.
 - [mdless](https://github.com/ttscoff/mdless)
 
 # About the name
-*naru* means implement in traditional Japanese. It was taken from "いづ方をも捨てじと心にとり持ちては、一事もなるべからず" of 徒然草　一八八, which roughly means "If you take care about everything, nothing can be implemented." 
+*naru* means implement in traditional Japanese. It was taken from "いづ方をも捨てじと心にとり持ちては、一事もなるべからず" of 徒然草 一八八, which roughly means "If you take care about everything, nothing can be implemented." 
