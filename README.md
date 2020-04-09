@@ -17,7 +17,10 @@ rake inet:download # donwload source geospatial data for exercise
 ```
 
 ### list of software installed by `rake inet:install`
+### Node.js
 - [@mapbox/vtshaver](https://github.com/mapbox/vtshaver)
+### Ruby
+- [mdless](https://github.com/ttscoff/mdless)
 
 ## first time exercise
 ```zsh
