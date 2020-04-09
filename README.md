@@ -12,11 +12,18 @@ Log in to your Raspbian and then execute the following.
 curl -sL https://unvt.github.io/equinox/install.sh | bash -
 git clone https://github.com/unvt/naru.git
 cd naru
-rake inet:install
-rake inet:download
+rake inet:install # install extra software
+rake inet:download # donwload source geospatial data for exercise
 ```
 
-## exercise
+## first time exercise
 ```zsh
-TODO
+rake tiles
+rake style
+rake host
+```
+
+# shutdown Raspberry Pi
+```zsh
+sudo poweroff
 ```
