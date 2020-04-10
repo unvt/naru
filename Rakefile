@@ -8,16 +8,16 @@ namespace :inet do
   end
   
   desc 'clone and build mapbox-gl-js, and copy to docs'
-  task :mapbox-gl-js do
+  task :mbgljs do
   end
   
   desc 'clone and build fonts, and copy to docs'
-  task :fonts
+  task :fonts do
     raise 'to be implemented.'
   end
   
   desc 'clone and build maki, and copy to docs'
-  task :sprite
+  task :sprite do
     raise 'to be implemented.'
   end
 end

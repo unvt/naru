@@ -25,7 +25,7 @@ rake host
 
 ## Advanced exercise
 ```zsh
-rake inet:mapbox-gl-js
+rake inet:mbgljs
 rake js
 rake inet:fonts
 rake inet:sprite
