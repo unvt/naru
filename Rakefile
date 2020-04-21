@@ -5,6 +5,8 @@ namespace :inet do
   
   desc 'download source geospatial data to the place'
   task :download do
+    u = "https://download.geofabrik.de/europe/{switzerland-latest.osm.pbf}"
+    sh "curl #{u} --output './src/#1'"
   end
   
   desc 'clone and build mapbox-gl-js, and copy to docs'

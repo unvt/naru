@@ -1,6 +1,7 @@
 docs/zxy
 mapbox-gl-js
 tile.mbtiles
+src/*.pbf
 
 # Logs
 logs
