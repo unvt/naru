@@ -1,0 +1,12 @@
+{
+  "name": "naru",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:unvt/naru",
+  "author": "United Nations Vector Tile Toolkit",
+  "license": "MIT",
+  "dependencies": {
+    "@mapbox/geojson-area": "^0.2.2",
+    "json-text-sequence": "^0.1.1"
+  }
+}
