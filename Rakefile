@@ -1,5 +1,7 @@
-REGION = 'australia-oceania'
-AREA = 'fiji'
+#REGION = 'australia-oceania'
+REGION = 'africa'
+#AREA = 'fiji'
+AREA = 'congo-democratic-republic'
 
 namespace :inet do
   desc 'install extra software for naru'
@@ -10,19 +12,20 @@ namespace :inet do
   desc 'download source geospatial data to the place'
   task :download do
     u = "https://download.geofabrik.de/#{REGION}/{#{AREA}-latest.osm.pbf}"
-    sh "curl #{u} --output './src/#1'"
+    sh "curl -C - #{u} --output './src/#1'"
   end
   
-  desc 'clone and build mapbox-gl-js, and copy to docs'
+  desc 'TODO: clone and build mapbox-gl-js, and copy to docs'
   task :mbgljs do
+    raise 'to be implemented.'
   end
   
-  desc 'clone and build fonts, and copy to docs'
+  desc 'TODO: clone and build fonts, and copy to docs'
   task :fonts do
     raise 'to be implemented.'
   end
   
-  desc 'clone and build maki, and copy to docs'
+  desc 'TODO: clone and build maki, and copy to docs'
   task :sprite do
     raise 'to be implemented.'
   end
@@ -46,14 +49,11 @@ task :host do
   sh "budo -d docs --cors"
 end
 
-desc 'build JavaScript code using rollup'
+desc 'TODO: build JavaScript code using rollup'
 task :js do
 end
 
-desc 'run vt-optimizer'
+desc 'TODO: run vt-optimizer'
 task :optimizer do
 end
 
-desc 'run vtshaver'
-task :shaver do
-end
