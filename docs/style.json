@@ -1,9 +1,9 @@
 {
   "center": [
-    18.539429,
-    4.395706
+    35.8624959,
+    -1.0896225
   ],
-  "glyphs": "https://optgeo.github.io/kokoromi-cf/font/{fontstack}/{range}.pbf",
+  "glyphs": "https://optgeo.github.io/kokoromi-ke/font/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
@@ -6930,18 +6930,18 @@
       "type": "circle"
     }
   ],
-  "site_root": "https://optgeo.github.io/kokoromi-cf",
+  "site_root": "https://optgeo.github.io/kokoromi-ke",
   "sources": {
     "v": {
       "attribution": "OpenStreetMap contributors",
       "maxzoom": 15,
       "tiles": [
-        "https://optgeo.github.io/kokoromi-cf/zxy/{z}/{x}/{y}.pbf"
+        "https://optgeo.github.io/kokoromi-ke/zxy/{z}/{x}/{y}.pbf"
       ],
       "type": "vector"
     }
   },
-  "sprite": "https://optgeo.github.io/kokoromi-cf/sprite/sprite",
+  "sprite": "https://optgeo.github.io/kokoromi-ke/sprite/sprite",
   "version": 8,
   "zoom": 10
 }
