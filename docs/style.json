@@ -1,9 +1,9 @@
 {
   "center": [
-    35.8624959,
-    -1.0896225
+    174.786987,
+    -41.31495
   ],
-  "glyphs": "https://optgeo.github.io/kokoromi-ke/font/{fontstack}/{range}.pbf",
+  "glyphs": "https://optgeo.github.io/kokoromi-nz/font/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
@@ -16,20 +16,6 @@
         ]
       },
       "type": "background"
-    },
-    {
-      "id": "Coastline",
-      "paint": {
-        "line-color": [
-          "rgb",
-          20,
-          90,
-          255
-        ]
-      },
-      "source": "v",
-      "source-layer": "Coastline",
-      "type": "line"
     },
     {
       "filter": [
@@ -6930,18 +6916,18 @@
       "type": "circle"
     }
   ],
-  "site_root": "https://optgeo.github.io/kokoromi-ke",
+  "site_root": "https://optgeo.github.io/kokoromi-nz",
   "sources": {
     "v": {
-      "attribution": "OpenStreetMap contributors",
+      "attribution": "OpenStreetMap contributors, <img src='https://unopengis.github.io/watermark/watermark.png'>",
       "maxzoom": 15,
       "tiles": [
-        "https://optgeo.github.io/kokoromi-ke/zxy/{z}/{x}/{y}.pbf"
+        "https://optgeo.github.io/kokoromi-nz/zxy/{z}/{x}/{y}.pbf"
       ],
       "type": "vector"
     }
   },
-  "sprite": "https://optgeo.github.io/kokoromi-ke/sprite/sprite",
+  "sprite": "https://optgeo.github.io/kokoromi-nz/sprite/sprite",
   "version": 8,
-  "zoom": 10
+  "zoom": 11
 }
