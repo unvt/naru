@@ -1,9 +1,9 @@
 {
   "center": [
-    174.786987,
-    -41.31495
+    28.844604,
+    -2.520549
   ],
-  "glyphs": "https://optgeo.github.io/kokoromi-nz/font/{fontstack}/{range}.pbf",
+  "glyphs": "https://optgeo.github.io/kokoromi-rw/font/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
@@ -6916,18 +6916,18 @@
       "type": "circle"
     }
   ],
-  "site_root": "https://optgeo.github.io/kokoromi-nz",
+  "site_root": "https://optgeo.github.io/kokoromi-rw",
   "sources": {
     "v": {
       "attribution": "OpenStreetMap contributors, <img src='https://unopengis.github.io/watermark/watermark.png'>",
       "maxzoom": 15,
       "tiles": [
-        "https://optgeo.github.io/kokoromi-nz/zxy/{z}/{x}/{y}.pbf"
+        "https://optgeo.github.io/kokoromi-rw/zxy/{z}/{x}/{y}.pbf"
       ],
       "type": "vector"
     }
   },
-  "sprite": "https://optgeo.github.io/kokoromi-nz/sprite/sprite",
+  "sprite": "https://optgeo.github.io/kokoromi-rw/sprite/sprite",
   "version": 8,
   "zoom": 11
 }

@@ -1,7 +1,7 @@
-REGION = 'australia-oceania'
-#REGION = 'africa'
-AREA = 'new-zealand'
-#AREA = 'kenya'
+#REGION = 'australia-oceania'
+REGION = 'africa'
+#AREA = 'new-zealand'
+AREA = 'rwanda'
 
 namespace :inet do
   desc 'install extra software for naru'
