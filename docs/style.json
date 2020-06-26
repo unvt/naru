@@ -1,9 +1,9 @@
 {
   "center": [
-    28.844604,
-    -2.520549
+    40.314331,
+    0.115356
   ],
-  "glyphs": "https://optgeo.github.io/kokoromi-rw/font/{fontstack}/{range}.pbf",
+  "glyphs": "http://localhost:9966/font/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
@@ -5990,7 +5990,7 @@
       ],
       "id": "pg-building",
       "paint": {
-        "fill-color": [
+        "fill-extrusion-color": [
           "match",
           [
             "get",
@@ -6015,11 +6015,12 @@
             215,
             215
           ]
-        ]
+        ],
+        "fill-extrusion-height": 10
       },
       "source": "v",
       "source-layer": "building",
-      "type": "fill"
+      "type": "fill-extrusion"
     },
     {
       "filter": [
@@ -6916,18 +6917,18 @@
       "type": "circle"
     }
   ],
-  "site_root": "https://optgeo.github.io/kokoromi-rw",
+  "site_root": "http://localhost:9966",
   "sources": {
     "v": {
       "attribution": "OpenStreetMap contributors, <img src='https://unopengis.github.io/watermark/watermark.png'>",
       "maxzoom": 15,
       "tiles": [
-        "https://optgeo.github.io/kokoromi-rw/zxy/{z}/{x}/{y}.pbf"
+        "http://localhost:9966/zxy/{z}/{x}/{y}.pbf"
       ],
       "type": "vector"
     }
   },
-  "sprite": "https://optgeo.github.io/kokoromi-rw/sprite/sprite",
+  "sprite": "http://localhost:9966/sprite/sprite",
   "version": 8,
   "zoom": 11
 }
