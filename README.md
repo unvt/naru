@@ -18,6 +18,7 @@ rake inet:install # install extra software
 # specify OSM regison and area for tiles
 export REGION=africa 
 export AREA=rwanda
+export SITE_ROOT=http://localhost:9966 # you can skip if you don't need to change it.
 rake inet:download # donwload source geospatial data for exercise
 ```
 
@@ -63,6 +64,7 @@ docker run -v $(pwd):/usr/src/app -it unvt/naru
 cd /usr/src/app
 export REGION=africa 
 export AREA=rwanda
+export SITE_ROOT=http://localhost:9966
 rake inet:download # download osm.obf
 rake tiles # create mbtiles under src folder
 rake style # create style.json

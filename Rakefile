@@ -1,6 +1,7 @@
 REGION = ENV['REGION']
 AREA = ENV['AREA']
 MBTILES = "src/tiles.mbtiles"
+SITE_ROOT = ENV['SITE_ROOT'] || 'http://localhost:9966'
 
 namespace :inet do
   desc 'install extra software for naru'
@@ -39,7 +40,7 @@ end
 desc 'build style.json from HOCON descriptions'
 task :style do
   require 'json'
-  sh "parse-hocon hocon/style.conf > docs/style.json"
+  sh "site_root=#{SITE_ROOT} parse-hocon hocon/style.conf > docs/style.json"
   center = JSON.parse(File.read('docs/zxy/metadata.json'))['center'].split(',')
     .map{|v| v.to_f }.slice(0, 2)
   style = JSON.parse(File.read('docs/style.json'))
