@@ -58,7 +58,7 @@ the list shall be minimized, moving items to `equinox`.
 - for creating `tiles.mbtiles` from the latest osm.pbf
 ```
 docker build . --tag unvt/naru
-docker run -it unvt/naru
+docker run -v $(pwd):/usr/src/app -it unvt/naru
 
 cd /usr/src/app
 export REGION=africa 

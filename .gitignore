@@ -3,6 +3,7 @@ mapbox-gl-js
 docs/style.json
 *.pbf
 *.mbtiles
+.DS_Store
 
 # Logs
 logs
