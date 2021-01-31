@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  naru:
+    image: unvt/naru
+    build:
+      dockerfile: Dockerfile
+      context: .
+    entrypoint: '/usr/src/app/entrypoint.sh'
+    volumes:
+      - ./docs:/usr/src/app/docs
+      - ./src:/usr/src/app/src
+    env_file: .env
+    ports:
+      - "9966:9966"
