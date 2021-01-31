@@ -56,7 +56,8 @@ module.exports = f => {
     nature(f) ||
     boundary(f) ||
     route(f) ||
-    structure(f)
+    structure(f) ||
+    landuse(f)
 }
 
 const flap = (f, z) => {
@@ -75,11 +76,8 @@ const flap = (f, z) => {
 const nature = (f) => {
   if (
     [
-      'cemetry', 'landfill', 'meadow', 'allotments', 'recreation_ground',
-      'orchard', 'vineyard', 'quarry', 'forest', 'farm', 'farmyard',
-      'farmland', 'grass', 'residential', 'retail', 'commercial',
-      'military', 'industrial', 'basin'
-    ].includes(f.properties.landuse) ||
+      'forest', 'farm', 'farmyard', 'farmland', 'grass',
+    ].includes(f.properties.landuse)  ||
     [
       'tree', 'wood', 'scrub', 'heath'
     ].includes(f.properties.natural)
@@ -89,8 +87,8 @@ const nature = (f) => {
       maxzoom: 15,
       layer: 'nature'
     }
-    if (f.tippecanoe.minzoom < 11) {
-      f.tippecanoe.minzoom = 11
+    if (f.tippecanoe.minzoom < 8) {
+      f.tippecanoe.minzoom = 8
     }
     return f
   }
@@ -234,7 +232,7 @@ const road = (f) => {
         return 10
       case 'trunk':
       case 'motorway_link':
-        return 9
+        return 8
       case 'motorway':
         return 8
       default:
@@ -481,6 +479,28 @@ const place = (f) => {
       minzoom: flap(f, 15),
       maxzoom: 15,
       layer: 'place'
+    }
+    return f
+  }
+  return null
+}
+
+// 10. landuse
+const landuse = (f) => {
+  if (
+    [
+      'cemetry', 'landfill', 'meadow', 'allotments', 'recreation_ground',
+      'orchard', 'vineyard', 'quarry', 'residential', 'retail', 'commercial',
+      'military', 'industrial', 'basin'
+    ].includes(f.properties.landuse) 
+  ) {
+    f.tippecanoe = {
+      minzoom: flap(f, 15),
+      maxzoom: 15,
+      layer: 'landuse'
+    }
+    if (f.tippecanoe.minzoom < 11) {
+      f.tippecanoe.minzoom = 11
     }
     return f
   }
