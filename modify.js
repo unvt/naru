@@ -82,13 +82,21 @@ const nature = (f) => {
       'tree', 'wood', 'scrub', 'heath'
     ].includes(f.properties.natural)
   ) {
+    const lut = {
+      forest: 8,
+      farm: 11,
+      farmyard: 11,
+      farmland: 11,
+      grass: 11
+    }
+    let minzoom = lut[f.properties.landuse]?lut[f.properties.landuse]:15;
     f.tippecanoe = {
-      minzoom: flap(f, 15),
+      minzoom: flap(f, minzoom),
       maxzoom: 15,
       layer: 'nature'
     }
-    if (f.tippecanoe.minzoom < 8) {
-      f.tippecanoe.minzoom = 8
+    if (f.tippecanoe.minzoom < 7) {
+      f.tippecanoe.minzoom = 7
     }
     return f
   }
@@ -232,9 +240,9 @@ const road = (f) => {
         return 10
       case 'trunk':
       case 'motorway_link':
-        return 8
+        return 7
       case 'motorway':
-        return 8
+        return 7
       default:
         return 15
     }
@@ -350,7 +358,7 @@ const place = (f) => {
     }
     switch (f.properties.place) {
       case 'city':
-        f.tippecanoe.minzoom = 8
+        f.tippecanoe.minzoom = 7
         break
       case 'town':
         f.tippecanoe.minzoom = 10
