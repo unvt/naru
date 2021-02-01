@@ -15,6 +15,8 @@ curl -sL https://unvt.github.io/equinox/install.sh | bash -
 git clone https://github.com/unvt/naru.git
 cd naru
 rake inet:install # install extra software
+vi .env #specify OSM regison and area for tiles
+set -a && source .env && set +a
 rake inet:download # donwload source geospatial data for exercise
 ```
 
@@ -49,6 +51,29 @@ Now it is OK to disconnect Raspberry Pi.
 - [mdless](https://github.com/ttscoff/mdless)
 ### policy
 the list shall be minimized, moving items to `equinox`.
+
+## Run on Docker
+
+- for creating `tiles.mbtiles` from the latest osm.pbf
+```
+docker build . --tag unvt/naru
+docker run -v $(pwd):/usr/src/app -it unvt/naru
+
+cd /usr/src/app
+vi .env #specify OSM regison and area for tiles
+set -a && source .env && set +a
+rake inet:download # download osm.obf
+rake tiles # create mbtiles under src folder
+rake style # create style.json
+```
+
+- for hosting tiles after creating by UNVT
+```
+docker build . --tag unvt/naru
+cp .env.example .env
+vi .env # specify your target REGION and AREA on .env file
+docker-compose up
+```
 
 # About the name
 *naru* means "to be implemented" in traditional Japanese. It was taken from "いづ方をも捨てじと心にとり持ちては、一事もなるべからず" of 徒然草 一八八, which roughly means "If you try to take care of everything, nothing can be implemented." 
