@@ -228,21 +228,21 @@ const road = (f) => {
         return 14
       case 'road':
       case 'tertiary_link':
-        return 13
       case 'tertiary':
-      case 'secondary_link':
-        return 12
-      case 'secondary':
-      case 'primary_link':
         return 11
+      case 'secondary_link':
+      case 'secondary':
+        return 9
+      case 'primary_link':
       case 'primary':
+        return 7
       case 'trunk_link':
-        return 10
       case 'trunk':
+        return 6
       case 'motorway_link':
-        return 7
+        return 6
       case 'motorway':
-        return 7
+        return 6
       default:
         return 15
     }
@@ -361,10 +361,10 @@ const place = (f) => {
         f.tippecanoe.minzoom = 7
         break
       case 'town':
-        f.tippecanoe.minzoom = 10
+        f.tippecanoe.minzoom = 9
         break
       case 'villege':
-        f.tippecanoe.minzoom = 12
+        f.tippecanoe.minzoom = 11
         break
     }
     if (f.properties.capital === 'yes') {
