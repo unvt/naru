@@ -56,7 +56,8 @@ module.exports = f => {
     nature(f) ||
     boundary(f) ||
     route(f) ||
-    structure(f)
+    structure(f) ||
+    landuse(f)
 }
 
 const flap = (f, z) => {
@@ -75,22 +76,27 @@ const flap = (f, z) => {
 const nature = (f) => {
   if (
     [
-      'cemetry', 'landfill', 'meadow', 'allotments', 'recreation_ground',
-      'orchard', 'vineyard', 'quarry', 'forest', 'farm', 'farmyard',
-      'farmland', 'grass', 'residential', 'retail', 'commercial',
-      'military', 'industrial', 'basin'
-    ].includes(f.properties.landuse) ||
+      'forest', 'farm', 'farmyard', 'farmland', 'grass',
+    ].includes(f.properties.landuse)  ||
     [
       'tree', 'wood', 'scrub', 'heath'
     ].includes(f.properties.natural)
   ) {
+    const lut = {
+      forest: 8,
+      farm: 11,
+      farmyard: 11,
+      farmland: 11,
+      grass: 11
+    }
+    let minzoom = lut[f.properties.landuse]?lut[f.properties.landuse]:15;
     f.tippecanoe = {
-      minzoom: flap(f, 15),
+      minzoom: flap(f, minzoom),
       maxzoom: 15,
       layer: 'nature'
     }
-    if (f.tippecanoe.minzoom < 11) {
-      f.tippecanoe.minzoom = 11
+    if (f.tippecanoe.minzoom < 7) {
+      f.tippecanoe.minzoom = 7
     }
     return f
   }
@@ -222,21 +228,21 @@ const road = (f) => {
         return 14
       case 'road':
       case 'tertiary_link':
-        return 13
       case 'tertiary':
-      case 'secondary_link':
-        return 12
-      case 'secondary':
-      case 'primary_link':
         return 11
-      case 'primary':
-      case 'trunk_link':
-        return 10
-      case 'trunk':
-      case 'motorway_link':
+      case 'secondary_link':
+      case 'secondary':
         return 9
+      case 'primary_link':
+      case 'primary':
+        return 7
+      case 'trunk_link':
+      case 'trunk':
+        return 6
+      case 'motorway_link':
+        return 6
       case 'motorway':
-        return 8
+        return 6
       default:
         return 15
     }
@@ -352,13 +358,13 @@ const place = (f) => {
     }
     switch (f.properties.place) {
       case 'city':
-        f.tippecanoe.minzoom = 8
+        f.tippecanoe.minzoom = 7
         break
       case 'town':
-        f.tippecanoe.minzoom = 10
+        f.tippecanoe.minzoom = 9
         break
       case 'villege':
-        f.tippecanoe.minzoom = 12
+        f.tippecanoe.minzoom = 11
         break
     }
     if (f.properties.capital === 'yes') {
@@ -481,6 +487,28 @@ const place = (f) => {
       minzoom: flap(f, 15),
       maxzoom: 15,
       layer: 'place'
+    }
+    return f
+  }
+  return null
+}
+
+// 10. landuse
+const landuse = (f) => {
+  if (
+    [
+      'cemetry', 'landfill', 'meadow', 'allotments', 'recreation_ground',
+      'orchard', 'vineyard', 'quarry', 'residential', 'retail', 'commercial',
+      'military', 'industrial', 'basin'
+    ].includes(f.properties.landuse) 
+  ) {
+    f.tippecanoe = {
+      minzoom: flap(f, 15),
+      maxzoom: 15,
+      layer: 'landuse'
+    }
+    if (f.tippecanoe.minzoom < 11) {
+      f.tippecanoe.minzoom = 11
     }
     return f
   }
