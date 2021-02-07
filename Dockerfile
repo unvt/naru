@@ -1,4 +1,7 @@
 FROM node:12
+
+ARG DEBIAN_FRONTEND=noninteractive
+
 WORKDIR /usr/src/app
 
 RUN apt-get update && apt-get -y upgrade &&\
