@@ -11,8 +11,10 @@ namespace :inet do
   
   desc 'download source geospatial data to the place'
   task :download do
-    u = "https://download.geofabrik.de/#{REGION}/{#{AREA}-latest.osm.pbf}"
-    sh "curl -C - #{u} --output './src/#1'"
+    if !File.exist?("src/#{AREA}-latest.osm.pbf")
+      u = "https://download.geofabrik.de/#{REGION}/{#{AREA}-latest.osm.pbf}"
+      sh "curl -C - #{u} --output './src/#1'"
+    end
   end
   
   desc 'TODO: clone and build mapbox-gl-js, and copy to docs'
