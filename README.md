@@ -16,7 +16,6 @@ git clone https://github.com/unvt/naru.git
 cd naru
 rake inet:install # install extra software
 vi .env #specify OSM regison and area for tiles
-set -a && source .env && set +a
 rake inet:download # donwload source geospatial data for exercise
 ```
 
