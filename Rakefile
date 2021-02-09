@@ -1,3 +1,5 @@
+require 'dotenv/load' #load environmental variable from .env
+
 REGION = ENV['REGION']
 AREA = ENV['AREA']
 MBTILES = "src/tiles.mbtiles"

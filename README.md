@@ -49,6 +49,7 @@ Now it is OK to disconnect Raspberry Pi.
 - [@mapbox/vtshaver](https://github.com/mapbox/vtshaver)
 ### Ruby
 - [mdless](https://github.com/ttscoff/mdless)
+- [dotenv](https://github.com/bkeepers/dotenv)
 ### policy
 the list shall be minimized, moving items to `equinox`.
 
@@ -61,7 +62,6 @@ docker run -v $(pwd):/usr/src/app -p 9966:9966 -it unvt/naru
 
 cd /usr/src/app
 vi .env #specify OSM regison and area for tiles
-set -a && source .env && set +a
 rake inet:download # download osm.obf
 rake tiles # create mbtiles under src folder
 rake style # create style.json
