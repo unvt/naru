@@ -47,6 +47,7 @@ Now it is OK to disconnect Raspberry Pi.
 ## List of software installed by `rake inet:install`
 ### Node.js
 - [@mapbox/vtshaver](https://github.com/mapbox/vtshaver)
+- [vt-optimizer](https://github.com/ibesora/vt-optimizer)
 ### Ruby
 - [mdless](https://github.com/ttscoff/mdless)
 - [dotenv](https://github.com/bkeepers/dotenv)
@@ -65,6 +66,7 @@ vi .env #specify OSM regison and area for tiles
 rake inet:download # download osm.obf
 rake tiles # create mbtiles under src folder
 rake style # create style.json
+rake optimizer # analyze tiles.mbtiles
 ```
 
 - for hosting tiles after creating by UNVT

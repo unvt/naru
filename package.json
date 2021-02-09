@@ -7,6 +7,10 @@
   "license": "MIT",
   "dependencies": {
     "@mapbox/geojson-area": "^0.2.2",
-    "json-text-sequence": "^0.1.1"
+    "json-text-sequence": "^0.1.1",
+    "vt-optimizer": "git+https://github.com/ibesora/vt-optimizer"
+  },
+  "scripts":{
+    "optimiser":"node ./node_modules/vt-optimizer/index.js"
   }
 }

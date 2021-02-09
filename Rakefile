@@ -62,7 +62,8 @@ desc 'TODO: build JavaScript code using rollup'
 task :js do
 end
 
-desc 'TODO: run vt-optimizer'
+desc 'run vt-optimizer'
 task :optimizer do
+  sh "yarn run optimiser -m #{MBTILES}"
 end
 
