@@ -57,7 +57,7 @@ the list shall be minimized, moving items to `equinox`.
 - for creating `tiles.mbtiles` from the latest osm.pbf
 ```
 docker build . --tag unvt/naru
-docker run -v $(pwd):/usr/src/app -it unvt/naru
+docker run -v $(pwd):/usr/src/app -p 9966:9966 -it unvt/naru
 
 cd /usr/src/app
 vi .env #specify OSM regison and area for tiles
