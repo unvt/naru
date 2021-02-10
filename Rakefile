@@ -27,9 +27,14 @@ namespace :inet do
     raise 'to be implemented.'
   end
   
-  desc 'TODO: clone and build maki, and copy to docs'
+  desc 'clone and build maki, and copy to docs'
   task :sprite do
-    raise 'to be implemented.'
+    u = "https://github.com/mapbox/maki/zipball/master"
+    dest = "./src/maki"
+    if !File.exist?("#{dest}.zip")
+      sh "wget -O #{dest}.zip #{u}"
+    end
+    sh "node sprite.js"
   end
 end
 

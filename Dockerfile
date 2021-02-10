@@ -25,6 +25,7 @@ RUN apt-get update && apt-get -y upgrade &&\
   sqlite3 \
   tmux \
   vim \
+  wget \
   xrdp \
   yarn \
   zip \
