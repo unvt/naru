@@ -2,6 +2,9 @@ docs/zxy
 mapbox-gl-js
 docs/style.json
 docs/sprite
+docs/glyphs/
+docs/glyphs.json
+src/
 *.pbf
 *.mbtiles
 *.zip
