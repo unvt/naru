@@ -1,8 +1,10 @@
 docs/zxy
 mapbox-gl-js
 docs/style.json
+docs/sprite
 *.pbf
 *.mbtiles
+*.zip
 .DS_Store
 
 # Logs

@@ -8,7 +8,12 @@
   "dependencies": {
     "@mapbox/geojson-area": "^0.2.2",
     "json-text-sequence": "^0.1.1",
-    "vt-optimizer": "git+https://github.com/ibesora/vt-optimizer"
+    "vt-optimizer": "git+https://github.com/ibesora/vt-optimizer",
+    "@mapbox/spritezero": "^7.0.1",
+    "adm-zip": "^0.5.2",
+    "config": "^3.3.3",
+    "hjson": "^3.2.2",
+    "path": "^0.12.7"
   },
   "scripts":{
     "optimiser":"node ./node_modules/vt-optimizer/index.js"

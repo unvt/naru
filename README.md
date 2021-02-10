@@ -17,6 +17,7 @@ cd naru
 rake inet:install # install extra software
 vi .env #specify OSM regison and area for tiles
 rake inet:download # donwload source geospatial data for exercise
+rake inet:sprite # download and generate sprite files
 ```
 
 ## First time exercise

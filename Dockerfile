@@ -40,6 +40,7 @@ RUN apt-get update&&\
   sqlite3\
   tmux\
   vim\
+  wget \
   yarn\
   zip\
   zlib1g-dev
