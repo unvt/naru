@@ -33,21 +33,22 @@ namespace :inet do
     FONSTS_DIR="./src/opensans"
     if !Dir.exist?("#{FONSTS_DIR}")
       sh "git clone https://github.com/googlefonts/opensans.git #{FONSTS_DIR}"
+      sh "cd #{FONSTS_DIR} && git checkout 256dc28b5c && cd ../../"
     end
     glyphs = [
-      ["/hinted_ttfs/OpenSans-Bold.ttf", "glyphs/Open Sans Bold"],
-      ["/hinted_ttfs/OpenSans-Bold.ttf", "glyphs/Open Sans Bold Italic"],
-      ["/hinted_ttfs/OpenSans-Bold.ttf", "glyphs/Open Sans Cond Bold"],
-      ["/hinted_ttfs/OpenSans-Bold.ttf", "glyphs/Open Sans Cond Light"],
-      ["/hinted_ttfs/OpenSans-Bold.ttf", "glyphs/Open Sans Cond Light Italic"],
-      ["/hinted_ttfs/OpenSans-Bold.ttf", "glyphs/Open Sans Extra Bold"],
-      ["/hinted_ttfs/OpenSans-Bold.ttf", "glyphs/Open Sans Extra Bold Italic"],
-      ["/hinted_ttfs/OpenSans-Bold.ttf", "glyphs/Open Sans Italic"],
-      ["/hinted_ttfs/OpenSans-Bold.ttf", "glyphs/Open Sans Light"],
-      ["/hinted_ttfs/OpenSans-Bold.ttf", "glyphs/Open Sans Light Italic"],
-      ["/hinted_ttfs/OpenSans-Bold.ttf", "glyphs/Open Sans Regular"],
-      ["/hinted_ttfs/OpenSans-Bold.ttf", "glyphs/Open Sans Semi Bold"],
-      ["/hinted_ttfs/OpenSans-Bold.ttf", "glyphs/Open Sans Semi Bold Italic"]
+      ["hinted_ttfs/OpenSans-Bold.ttf", "glyphs/Open Sans Bold"],
+      ["hinted_ttfs/OpenSans-BoldItalic.ttf", "glyphs/Open Sans Bold Italic"],
+      ["hinted_ttfs/OpenSans-CondBold.ttf", "glyphs/Open Sans Cond Bold"],
+      ["hinted_ttfs/OpenSans-CondLight.ttf", "glyphs/Open Sans Cond Light"],
+      ["hinted_ttfs/OpenSans-CondLightItalic.ttf", "glyphs/Open Sans Cond Light Italic"],
+      ["hinted_ttfs/OpenSans-ExtraBold.ttf", "glyphs/Open Sans Extra Bold"],
+      ["hinted_ttfs/OpenSans-ExtraBoldItalic.ttf", "glyphs/Open Sans Extra Bold Italic"],
+      ["hinted_ttfs/OpenSans-Italic.ttf", "glyphs/Open Sans Italic"],
+      ["hinted_ttfs/OpenSans-Light.ttf", "glyphs/Open Sans Light"],
+      ["hinted_ttfs/OpenSans-LightItalic.ttf", "glyphs/Open Sans Light Italic"],
+      ["hinted_ttfs/OpenSans-Regular.ttf", "glyphs/Open Sans Regular"],
+      ["hinted_ttfs/OpenSans-SemiBold.ttf", "glyphs/Open Sans Semi Bold"],
+      ["hinted_ttfs/OpenSans-SemiBoldItalic.ttf", "glyphs/Open Sans Semi Bold Italic"]
     ]
     glyphsJson = []
     glyphs.each do |glyph|
