@@ -7,6 +7,17 @@
   "license": "MIT",
   "dependencies": {
     "@mapbox/geojson-area": "^0.2.2",
-    "json-text-sequence": "^0.1.1"
+    "@mapbox/spritezero": "^7.0.1",
+    "adm-zip": "^0.5.2",
+    "config": "^3.3.3",
+    "fontnik": "^0.6.0",
+    "hjson": "^3.2.2",
+    "json-text-sequence": "^0.1.1",
+    "path": "^0.12.7",
+    "vt-optimizer": "git+https://github.com/ibesora/vt-optimizer"
+  },
+  "scripts": {
+    "optimiser": "node ./node_modules/vt-optimizer/index.js",
+    "build-glyphs": "./node_modules/.bin/build-glyphs"
   }
 }

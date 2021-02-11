@@ -16,8 +16,8 @@ git clone https://github.com/unvt/naru.git
 cd naru
 rake inet:install # install extra software
 vi .env #specify OSM regison and area for tiles
-set -a && source .env && set +a
 rake inet:download # donwload source geospatial data for exercise
+rake inet:sprite # download and generate sprite files
 ```
 
 ## First time exercise
@@ -47,8 +47,10 @@ Now it is OK to disconnect Raspberry Pi.
 ## List of software installed by `rake inet:install`
 ### Node.js
 - [@mapbox/vtshaver](https://github.com/mapbox/vtshaver)
+- [vt-optimizer](https://github.com/ibesora/vt-optimizer)
 ### Ruby
 - [mdless](https://github.com/ttscoff/mdless)
+- [dotenv](https://github.com/bkeepers/dotenv)
 ### policy
 the list shall be minimized, moving items to `equinox`.
 
@@ -57,14 +59,14 @@ the list shall be minimized, moving items to `equinox`.
 - for creating `tiles.mbtiles` from the latest osm.pbf
 ```
 docker build . --tag unvt/naru
-docker run -v $(pwd):/usr/src/app -it unvt/naru
+docker run -v $(pwd):/usr/src/app -p 9966:9966 -it unvt/naru
 
 cd /usr/src/app
 vi .env #specify OSM regison and area for tiles
-set -a && source .env && set +a
 rake inet:download # download osm.obf
 rake tiles # create mbtiles under src folder
 rake style # create style.json
+rake optimizer # analyze tiles.mbtiles
 ```
 
 - for hosting tiles after creating by UNVT
