@@ -26,7 +26,7 @@ def glyphs_generate(fonts_dir, output_dir)
   glyphsJson = []
   glyphs.each do |glyph|
     sh "mkdir -p '#{output_dir}/#{glyph[1]}'"
-    sh "yarn run build-glyphs #{sans_fonts_dir}/#{glyph[0]} '#{output_dir}/#{glyph[1]}'"
+    sh "yarn run build:glyphs #{sans_fonts_dir}/#{glyph[0]} '#{output_dir}/#{glyph[1]}'"
     sh "cp #{sans_fonts_dir}/LICENSE.txt '#{output_dir}/#{glyph[1]}'"
     glyphsJson << glyph[1].split('/')[1]
   end

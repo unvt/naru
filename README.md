@@ -24,6 +24,7 @@ rake inet:sprite # download and generate sprite files
 ```zsh
 rake inet:download # download osm.pbf
 rake inet:mbgljs # download mapbox-gl-js package
+rake js # rollup javascript code
 rake inet:sprite # download maki and build sprite
 rake inet:fonts # download fonts and create glyphs
 rake tiles # create mbtiles under src folder
@@ -69,6 +70,7 @@ cd /usr/src/app
 vi .env #specify OSM regison and area for tiles
 rake inet:download # download osm.pbf
 rake inet:mbgljs # download mapbox-gl-js package
+rake js # rollup javascript code
 rake inet:sprite # download maki and build sprite
 rake inet:fonts # download fonts and create glyphs
 rake tiles # create mbtiles under src folder

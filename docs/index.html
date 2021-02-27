@@ -9,23 +9,11 @@
 body { margin: 0; top: 0; bottom: 0; width: 100%; }
 #map { position: absolute; top: 0; bottom: 0; width: 100%; }
 </style>
-<script src="js/mapbox-gl.js"></script>
 </head>
 <body>
 <div id="map"></div>
-<script type="module">
-const map = new mapboxgl.Map({
-  container: 'map',
-  style: 'style.json',
-  attributionControl: true,
-  hash: true
-})
-
-map.addControl(new mapboxgl.NavigationControl())
-map.addControl(new mapboxgl.ScaleControl({
-  maxWidth: 200, unit: 'metric'
-}))
-</script>
+<script src="js/mapbox-gl.js"></script>
+<script src="js/bundle.js"></script>
 </body>
 </html>
 
