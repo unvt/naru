@@ -75,8 +75,9 @@ task :host do
   sh "budo -d docs --cors"
 end
 
-desc 'TODO: build JavaScript code using rollup'
+desc 'build JavaScript code using rollup'
 task :js do
+  sh "yarn run build:js"
 end
 
 desc 'run vt-optimizer'
