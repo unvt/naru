@@ -4,6 +4,7 @@ docs/style.json
 docs/sprite
 docs/glyphs/
 docs/glyphs.json
+docs/js
 src/
 *.pbf
 *.mbtiles
