@@ -30,7 +30,7 @@
   },
   "scripts": {
     "optimiser": "node ./node_modules/vt-optimizer/index.js",
-    "build-glyphs": "./node_modules/.bin/build-glyphs",
+    "build:glyphs": "./node_modules/.bin/build-glyphs",
     "build:js": "rollup -c js/rollup.config.js"
   }
 }
