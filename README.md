@@ -22,9 +22,13 @@ rake inet:sprite # download and generate sprite files
 
 ## First time exercise
 ```zsh
-rake tiles
-rake style
-rake host
+rake inet:download # download osm.pbf
+rake inet:mbgljs # download mapbox-gl-js package
+rake inet:sprite # download maki and build sprite
+rake inet:fonts # download fonts and create glyphs
+rake tiles # create mbtiles under src folder
+rake style # create style.json
+rake host # host unvt on budo
 ```
 
 ## Advanced exercise
@@ -33,7 +37,7 @@ rake inet:mbgljs
 rake js
 rake inet:fonts
 rake inet:sprite
-rake optimizer
+rake optimizer # analyze tiles.mbtiles
 rake shaver
 ```
 
@@ -57,13 +61,16 @@ the list shall be minimized, moving items to `equinox`.
 ## Run on Docker
 
 - for creating `tiles.mbtiles` from the latest osm.pbf
-```
+```zsh
 docker build . --tag unvt/naru
 docker run -v $(pwd):/usr/src/app -p 9966:9966 -it unvt/naru
 
 cd /usr/src/app
 vi .env #specify OSM regison and area for tiles
-rake inet:download # download osm.obf
+rake inet:download # download osm.pbf
+rake inet:mbgljs # download mapbox-gl-js package
+rake inet:sprite # download maki and build sprite
+rake inet:fonts # download fonts and create glyphs
 rake tiles # create mbtiles under src folder
 rake style # create style.json
 rake optimizer # analyze tiles.mbtiles
