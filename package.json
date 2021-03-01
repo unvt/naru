@@ -13,11 +13,24 @@
     "fontnik": "^0.6.0",
     "hjson": "^3.2.2",
     "json-text-sequence": "^0.1.1",
+    "mapbox-gl": "1.13.1",
     "path": "^0.12.7",
     "vt-optimizer": "git+https://github.com/ibesora/vt-optimizer"
   },
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.8",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "rollup": "^2.40.0",
+    "rollup-plugin-import-css": "^2.0.0"
+  },
   "scripts": {
     "optimiser": "node ./node_modules/vt-optimizer/index.js",
-    "build-glyphs": "./node_modules/.bin/build-glyphs"
+    "build:glyphs": "./node_modules/.bin/build-glyphs",
+    "build:js": "rollup -c js/rollup.config.js"
   }
 }
