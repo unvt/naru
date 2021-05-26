@@ -64,7 +64,7 @@ the list shall be minimized, moving items to `equinox`.
 - for creating `tiles.mbtiles` from the latest osm.pbf
 ```zsh
 docker build . --tag unvt/naru
-docker run -v $(pwd):/usr/src/app -p 9966:9966 -it unvt/naru
+docker run -v ${pwd}:/usr/src/app -p 9966:9966 -it unvt/naru
 
 cd /usr/src/app
 vi .env #specify OSM regison and area for tiles
@@ -77,6 +77,8 @@ rake tiles # create mbtiles under src folder
 rake style # create style.json
 rake optimizer # analyze tiles.mbtiles
 ```
+
+note: npm packages, "are-we-there-yet" and "mapnik" were requested at my trial (TU in May 2021)  
 
 - for hosting tiles after creating by UNVT
 ```
