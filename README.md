@@ -78,7 +78,7 @@ rake style # create style.json
 rake optimizer # analyze tiles.mbtiles
 ```
 
-note: npm packages, "are-we-there-yet" and "mapnik" were requested at my trial (TU in May 2021)  
+note: npm packages, "are-we-there-yet", "mapnik", and "fontnik" were requested at my trial (TU in May 2021)  
 
 - for hosting tiles after creating by UNVT
 ```
