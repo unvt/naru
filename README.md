@@ -1,5 +1,3 @@
-*This project is not actively maintained at present. However, opteo/kokoromi-\* series are developed using naru.*
-
 # naru
 Vector Tile Academy (VTA) code for Raspberry Pi
 
