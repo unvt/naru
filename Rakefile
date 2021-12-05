@@ -46,7 +46,7 @@ namespace :inet do
     u = "https://github.com/mapbox/maki/zipball/main"
     dest = "./src/maki"
     if !File.exist?("#{dest}.zip")
-      sh "wget -O #{dest} #{u}"
+      sh "wget -O #{dest}.zip #{u}"
     end
     sh "node sprite.js"
   end
