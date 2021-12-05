@@ -43,7 +43,7 @@ namespace :inet do
   
   desc 'clone and build maki, and copy to docs'
   task :sprite do
-    u = "https://github.com/mapbox/maki/zipball/master"
+    u = "https://github.com/mapbox/maki/zipball/main"
     dest = "./src/maki"
     if !File.exist?("#{dest}.zip")
       sh "wget -O #{dest}.zip #{u}"
@@ -67,7 +67,6 @@ task :style do
   style = JSON.parse(File.read('docs/style.json'))
   style['center'] = center
   File.write('docs/style.json', JSON.pretty_generate(style))
-  sh "gl-style-validate docs/style.json"
 end
 
 desc 'host the site'
