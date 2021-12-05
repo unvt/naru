@@ -36,7 +36,7 @@ class Spriter{
     let svgs = []
     for (let i = 0; i < this.table.length / 2; i++) {
       const id = this.table[2 * i]
-      const svgName = `${this.table[2 * i + 1]}-11.svg`
+      const svgName = `${this.table[2 * i + 1]}.svg`
       const svgData = icons[svgName]
       if (!svgData){
         throw new Error(`Invalid icon name: ${id}`)
